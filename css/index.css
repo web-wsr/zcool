@@ -1,0 +1,777 @@
+body {
+    overflow-x: auto;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    font-family: PingFang SC, Lantinghei SC, Microsoft YaHei, HanHei SC, Helvetica Neue, Open Sans, Arial, Hiragino Sans GB, 微软雅黑, STHeiti, WenQuanYi Micro Hei, SimSun, sans-serif, HYWenHei-GEW !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pege-header {
+    min-width: 1260px;
+    height: 56px;
+    min-width: 1260px;
+    font-size: 14px;
+    background: #fff200;
+    position: relative;
+    z-index: 1050;
+}
+
+.header-content {
+    /* width: 1843px; */
+    height: 56px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-common {
+    display: flex;
+    width: 790px;
+    height: 56px;
+}
+
+.header-logo {
+    display: inline-block;
+    width: 160px;
+    height: 56px;
+}
+
+.header-menu {
+    display: flex;
+    width: 630px;
+    height: 56px;
+}
+
+.header-menu-item {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    line-height: 19px;
+    padding: 0 24px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header-menu-item:nth-child(2)::after,
+.header-menu-item:nth-child(3)::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff4a3b;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-9px);
+    right: 13px;
+}
+
+.header-badge {
+    display: inline-block;
+    vertical-align: top;
+    width: 58px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(59px, -22px);
+}
+
+.header-user {
+    width: 1053px;
+    height: 56px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-search {
+    width: 540px;
+    height: 34px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.search-input {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    appearance: none;
+    font-size: 14px;
+    border: 0;
+    outline: 0;
+    color: #444;
+    overflow: visible;
+    flex: 1 1;
+}
+
+.user-search-upload {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    color: rgb(51, 51, 51);
+    background: url(../img/icon-image-xiangji.svg);
+    cursor: pointer;
+}
+
+.user-search-upload:hover {
+    opacity: .65;
+}
+
+.user-search-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.user-cloud {
+    display: flex;
+    width: 70px;
+    height: 56px;
+    padding: 13px 20px;
+    text-align: center;
+}
+
+.uesr-sign {
+    width: 156px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-signin {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 0px;
+    padding-left: 20px;
+    line-height: 19px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0s ease 0s;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.user-signin:hover {
+    font-weight: 500;
+}
+
+.user-signon {
+    margin-left: 32px;
+    padding: 7px 24px;
+    border-radius: 8px;
+    line-height: 19px;
+    color: #fff;
+    background-color: #222;
+    transition: all 0s ease 0s;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-signon:hover {
+    background-color: #4e4e4e;
+}
+
+.main-wrapper {
+    min-height: calc(100vh - 56px - 260px - 40px);
+}
+
+.banner-section {
+    position: relative;
+    height: 370px;
+    border-radius: 4px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.banner-carousel {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+
+.carousel-slider {
+    display: flex;
+    width: 8400px;
+    height: 100%;
+    opacity: 1;
+    animation: move 20s ease .2s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(-1400px, 0, 0);
+    }
+
+    40% {
+        transform: translate3d(-2800px, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(-4200px, 0, 0);
+    }
+
+    80% {
+        transform: translate3d(-5600px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-7000px, 0, 0);
+    }
+
+}
+
+.carousel-slider-wrapper {
+    width: 1400px;
+    padding: 0 10px;
+}
+
+.carousel-slider-img {
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.activity-section {
+    width: 100%;
+    height: 271.06px;
+}
+
+.activity-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 271.06px;
+    width: 100%;
+    padding: 20px 80px 32px;
+}
+
+.activity-item {
+    display: block;
+    width: 273.83px;
+    height: 219.06px;
+    margin-right: 20px;
+    border-radius: 12px;
+    background-color: rgb(237, 237, 237);
+}
+
+.activity-item-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    user-select: none;
+}
+
+/* creation-section部分开始 */
+.creation-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 52px;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 0 auto;
+}
+
+.creation-title {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1743px;
+    height: 56px;
+    margin: 0 80px;
+    border-bottom: 1px solid rgb(237, 237, 237);
+    min-width: 1200px;
+    max-width: 1880px;
+}
+
+.creation-title-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 520px;
+    height: 56px;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.creation-title-item {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 56px;
+    margin: 0 15px;
+}
+
+.creation-title-item .icon-wenhaobangzhu-yuankuang:hover {
+    color: rgb(186, 186, 186);
+}
+
+.creation-title-name {
+    display: block;
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+    line-height: 22px;
+    color: rgb(153, 153, 153);
+    text-align: center;
+    border-radius: 0px;
+    padding: 16px 30px;
+    transition: all 0s ease 0s;
+}
+
+.creation-title-item:hover .creation-title-name {
+    color: rgb(34, 34, 34);
+    font-weight: 500;
+}
+
+.creation-logo {
+    position: absolute;
+    right: 0px;
+    bottom: 1px;
+    display: block;
+    height: 55px;
+}
+
+.creation-logo-img {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: 55px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.creation-title-item:nth-child(3) {
+    border-bottom: 2px solid transparent;
+    border-color: rgb(34, 34, 34);
+}
+
+.creation-title-item:nth-child(3) .creation-title-name {
+    color: rgb(34, 34, 34);
+    font-weight: 500;
+}
+
+.creation-content {
+    height: 100%;
+    padding-top: 32px;
+    min-width: 1561px;
+}
+
+.creation-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: 4032.56px;
+    padding: 0 80px;
+    min-width: 1200px;
+    max-width: 2040px;
+}
+
+.creation-item {
+    width: 329.39px;
+    height: 300.05px;
+    margin-bottom: 36px;
+    /* background-color: pink; */
+}
+
+.creation-hd {
+    width: 329.39px;
+    height: 247.03px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: rgb(237, 237, 237);
+}
+
+.creation-link {
+    width: 100%;
+    height: 100%;
+}
+
+.creation-link::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.03) 100%);
+}
+
+.creation-hd:hover .creation-link::after {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.creation-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creatio-hot {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+}
+
+.creation-info {
+    height: 21px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creation-info-title {
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    line-height: 21px;
+    white-space: nowrap;
+    max-width: 100%;
+    transition: all 0s ease 0s;
+    color: rgb(34, 34, 34);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.creation-info-title:hover {
+    color: rgb(255, 115, 0);
+}
+
+.creation-info-watch {
+    height: 16px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-watch-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.info-watch-num {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 0;
+    font-weight: 500;
+    cursor: default;
+    margin-left: 4px;
+    transition: all 0s ease 0s;
+    color: rgb(85, 85, 85);
+}
+
+.creation-ft {
+    width: 100%;
+    height: 20px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.creation-user {
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.creation-user-profile {
+    background-color: rgb(237, 237, 237);
+    border-radius: 50%;
+}
+
+.creation-user-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.creation-user-name {
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    margin-left: 8px;
+    transition: all 0s ease 0s;
+    color: rgb(85, 85, 85);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.creation-user-name:hover {
+    color: rgb(255, 115, 0);
+}
+
+.creation-designer {
+    display: flex;
+    flex-flow: wrap;
+    flex: initial;
+    justify-content: flex-start;
+    align-items: center;
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+}
+
+.creation-designer-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+.creation-pagination {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+.pagination-item {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    line-height: 38px;
+    border-radius: 8px;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
+.pagination-item:hover {
+    background: rgb(229, 229, 229);
+}
+
+.pagination-item:nth-child(1) {
+    margin-left: 0;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+}
+
+.pagination-item:nth-child(1):hover {
+    background: rgb(67, 67, 67);
+}
+
+.pagination-item:nth-child(11) {
+    margin-left: 6px;
+}
+
+/* page-footer部分开始 */
+.page-footer {
+    width: 100%;
+    height: 32px;
+    position: relative;
+    z-index: 1050;
+}
+
+.footer-content {
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 1440px;
+    height: 32px;
+    padding: 0px 30px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    border-top: 1px solid rgb(237, 237, 237);
+    background-color: rgb(255, 255, 255);
+}
+
+.footer-left-container {
+    width: 608px;
+    height: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-contact {
+    width: 328px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social-contact-title {
+    height: 20px;
+    margin-right: 24px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-contact-name {
+    font-size: 12px;
+    margin-right: 6px;
+    display: inline-block;
+    line-height: 20px;
+    font-weight: normal;
+    transition: all 0s ease 0s;
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+}
+
+.social-contact-arrow {
+    width: 16px;
+    height: 13px;
+}
+
+.social-link {
+    width: 280px;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link-title {
+    width: 48px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.social-link-title:hover {
+    color: rgb(255, 115, 0);
+}
+
+.footer-right-container {
+    height: 31px;
+    display: flex;
+    align-items: center;
+}
+
+.iconfont {
+    cursor: pointer;
+}
+
+.icon-qr,
+.icon-shouji-qr {
+    display: none;
+    position: absolute;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 116px;
+    height: 116px;
+    padding: 8px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -28px;
+    border-radius: 8px;
+    background-image: url(../img/icon-zcool-wechat.jpeg);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+}
+
+.icon-shouji-qr {
+    background-image: url(../img/new-zcool-app-code.jpg);
+}
+
+.icon-weixin:hover .icon-qr {
+    display: block;
+}
+
+.icon-weixin:hover {
+    color: rgb(40, 196, 69);
+}
+
+.icon-shouji:hover .icon-shouji-qr {
+    display: block;
+}
+
+.icon-shouji:hover {
+    color: rgb(255, 115, 0);
+}
+
+.copyright-link {
+    height: 16px;
+    line-height: 16px;
+    margin-right: 12px;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.copyright-link:hover {
+    color: rgb(255, 115, 0);
+}
+
+.copyright-name {
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
